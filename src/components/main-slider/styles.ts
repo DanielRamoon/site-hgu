@@ -85,6 +85,7 @@ export const SliderIndicators = styled.div`
 
   @media (max-width: 768px) {
     margin-right: 0;
+    display: none;
   }
 `;
 
@@ -97,6 +98,7 @@ export const Indicator = styled.div`
 
   &.active {
     background-color: #378ebb;
+    display: none;
   }
 `;
 

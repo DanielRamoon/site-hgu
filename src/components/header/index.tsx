@@ -26,7 +26,7 @@ const Header: React.FC = () => {
       </NavLinks>
       <ButtonGroup>
         <Button color="red">Beneficiários</Button>
-        <Button color="blue">Prestadores</Button>
+        <Button color="#378EBB">Prestadores</Button>
         <Button color="red">Rede Credenciada</Button>
       </ButtonGroup>
       <SearchContainer>

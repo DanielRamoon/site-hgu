@@ -12,10 +12,15 @@ import Image1 from "../../assets/bt-plano01.png";
 import Image2 from "../../assets/bt-plano02.png";
 import Image3 from "../../assets/bt-plano03.png";
 import Image4 from "../../assets/bt-plano04.png";
-import SideImage from "../../assets/foto-destaque01.fw.png";
+import SideImage1 from "../../assets/foto-destaque01.fw.png";
+import SideImage2 from "../../assets/foto-plano02.fw.png";
 
 const Plans = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  const sideImages = [SideImage1, SideImage2];
 
   useEffect(() => {
     const handleResize = () => {
@@ -30,6 +35,20 @@ const Plans = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false);
+      setTimeout(() => {
+        setCurrentImageIndex(
+          (prevIndex) => (prevIndex + 1) % sideImages.length
+        );
+        setFade(true);
+      }, 500);
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, [sideImages.length]);
 
   return (
     <PlansContainer>
@@ -63,7 +82,11 @@ const Plans = () => {
         </Card>
       </CardsContainer>
       <SideImageContainer>
-        <SideImageElement src={SideImage} alt="Imagem Lateral" />
+        <SideImageElement
+          src={sideImages[currentImageIndex]}
+          alt="Imagem Lateral"
+          className={fade ? "fade-in" : "fade-out"}
+        />
       </SideImageContainer>
     </PlansContainer>
   );

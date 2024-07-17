@@ -67,6 +67,7 @@ export const Card = styled.div`
     display: block;
     object-fit: cover;
     border-radius: 8px 0 0 8px;
+    z-index: -1;
   }
 
   .card-content {
@@ -82,15 +83,15 @@ export const Card = styled.div`
 
 export const SideImageContainer = styled.div`
   position: absolute;
-  top: 122rem;
+  top: 114rem;
   left: 50rem;
-  z-index: 1;
+  z-index: -1;
 
   @media (max-width: 768px) {
     position: relative;
     top: 0.5rem;
     left: 2rem;
-    z-index: 1;
+    z-index: -1;
     text-align: center;
   }
 `;
@@ -99,6 +100,12 @@ export const SideImageElement = styled.img`
   width: 80%;
   height: auto;
   display: block;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+
+  &.fade-out {
+    opacity: 0;
+  }
 
   @media (max-width: 768px) {
     margin: 2rem 0;

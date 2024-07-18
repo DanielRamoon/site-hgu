@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   height: 60vh;
-  background-color: #4682b4;
+  background-color: #378ebb;
 
   @media (max-width: 768px) {
     height: auto;
@@ -51,7 +51,7 @@ export const InfoText = styled.p`
 `;
 
 export const Button = styled.button`
-  background-color: blue;
+  background-color: #bf2b2b;
   color: white;
   border: none;
   padding: 0.5rem 1rem;

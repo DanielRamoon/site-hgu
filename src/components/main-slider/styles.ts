@@ -62,7 +62,7 @@ export const SliderImage = styled.img`
   height: auto;
   object-fit: cover;
   position: relative;
-  top: 20px;
+  top: 58px;
   z-index: -1;
   opacity: 1;
   animation: ${fadeIn} 5s ease-out forwards;

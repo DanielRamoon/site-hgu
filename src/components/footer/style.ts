@@ -51,7 +51,8 @@ export const SocialIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 10px;
+  margin: 0 5px;
+  gap: 10px;
   margin-left: 5rem;
 
   @media (max-width: 768px) {
@@ -61,7 +62,7 @@ export const SocialIcon = styled.div`
   }
 
   svg {
-    color: red;
+    color: #bf2b2b;
     width: 50px;
     height: 50px;
 

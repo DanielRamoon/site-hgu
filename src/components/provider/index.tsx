@@ -27,7 +27,7 @@ export default function Provaider() {
             <strong>Prestador Credenciado</strong>
           </WelcomeText>
           <InfoText>Tenha mais informações</InfoText>
-          <Button>Clique aqui e fça seu caastro</Button>
+          <Button>Clique aqui e faça seu cadastro</Button>
         </Section>
         <Divider />
         <Section>

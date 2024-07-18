@@ -13,7 +13,7 @@ import {
   LinkItem,
   HospitalAddress,
 } from "./style";
-import Image01 from "./../../assets/logo-hgusaude.png";
+import Image01 from "./../../assets/logo002.fw.png";
 import Image02 from "./../../assets/bt-faleconosco.fw.png";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 

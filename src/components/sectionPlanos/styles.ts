@@ -9,7 +9,8 @@ export const PlansContainer = styled.div`
   align-items: center;
 
   @media (max-width: 768px) {
-    height: 113vh;
+    height: 123vh;
+    margin-top: 50px;
   }
 `;
 
@@ -114,6 +115,7 @@ export const SideImageElement = styled.img`
   }
 
   @media (max-width: 768px) {
-    margin: 2rem 0;
+    margin: 5rem 0;
+    margin-top: 180px;
   }
 `;

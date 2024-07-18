@@ -44,6 +44,17 @@ const MainSlider: React.FC = () => {
     return () => clearInterval(interval);
   }, [images.length]);
 
+  const getDescription = () => {
+    switch (currentImageIndex) {
+      case 1:
+        return "Venha conhecer nosso plano Empresarial";
+      case 2:
+        return "Telemedicina: Mais segurança e praticidade para você.";
+      default:
+        return "O Plano é sempre cuidar de você e sua família";
+    }
+  };
+
   return (
     <MainSliderContainer
       style={{ backgroundImage: `url(${backgrounds[currentImageIndex]})` }}
@@ -58,11 +69,7 @@ const MainSlider: React.FC = () => {
         </SliderImageWrapper>
         <SliderText>
           <SliderDescription>
-            <span>O Plano é sempre</span>
-            <br />
-            <strong>cuidar de você </strong> e sua
-            <br />
-            <strong>família</strong>
+            <span>{getDescription()}</span>
           </SliderDescription>
           <ActionButton>Clique aqui</ActionButton>
         </SliderText>

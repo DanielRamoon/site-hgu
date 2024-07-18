@@ -28,7 +28,6 @@ export const MainSliderContainer = styled.div`
   @media (max-width: 768px) {
     padding: 0 1rem;
     height: 68vh;
-    height: 57vh;
   }
 `;
 
@@ -69,7 +68,7 @@ export const SliderImage = styled.img`
   animation: ${fadeIn} 5s ease-out forwards;
 
   @media (min-width: 769px) {
-    width: 80%;
+    width: 70%;
   }
 `;
 

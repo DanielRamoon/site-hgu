@@ -1,3 +1,4 @@
+import React from "react";
 import { Container, TextContainerAbout, TitleHistoric } from "./styles";
 
 import Header from "../../components/header";

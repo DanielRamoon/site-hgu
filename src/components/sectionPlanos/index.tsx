@@ -54,12 +54,12 @@ const Plans = () => {
     <PlansContainer>
       <Title>
         Conheça os{" "}
-        <strong style={{ color: "#000" }}>planos de saúde do HGU</strong>
+        <strong style={{ color: "#378EBB" }}>planos de saúde do HGU</strong>
       </Title>
       <Description>
         Para oferecer mais benefícios e<br /> cobertura diferenciada para
         <br />{" "}
-        <strong style={{ color: "#000" }}>
+        <strong style={{ color: "#378EBB" }}>
           você, sua família e sua empresa.
         </strong>
       </Description>

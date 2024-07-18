@@ -61,6 +61,7 @@ export const MoreNewsButton = styled.button`
   padding: 1rem 2rem;
   font-size: 1.2rem;
   cursor: pointer;
+  margin-bottom: 100px;
   transition: background-color 0.3s ease;
 
   &:hover {

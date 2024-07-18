@@ -5,6 +5,12 @@ export const PlansContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 3rem;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    height: 113vh;
+  }
 `;
 
 export const Title = styled.h2`

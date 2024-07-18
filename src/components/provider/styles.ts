@@ -89,7 +89,7 @@ export const CenteredTitle = styled.div`
   text-align: center;
   margin: 1rem 0;
   img {
-    max-width: 45%;
+    max-width: 55%;
     height: auto;
   }
 `;

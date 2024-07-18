@@ -23,48 +23,51 @@ export const GrayContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   padding: 20px;
+  margin: 0 auto;
   box-sizing: border-box;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    width: 90%;
+    width: 100%;
   }
 `;
 
 export const Image = styled.img`
   width: 20%;
   margin: 0 10px;
+  margin-left: 3rem;
 
   @media (max-width: 768px) {
-    width: 70%;
+    width: 50%;
     margin: 10px 0;
   }
 `;
 
 export const SocialIcon = styled.div`
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   background-color: white;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 10px;
+  margin-left: 5rem;
 
   @media (max-width: 768px) {
-    width: 40px;
-    height: 40px;
-    margin: 10px 0;
+    width: 50px;
+    height: 50px;
+    margin: 15px 0;
   }
 
   svg {
     color: red;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 
     @media (max-width: 768px) {
-      width: 25px;
-      height: 25px;
+      width: 35px;
+      height: 35px;
     }
   }
 `;

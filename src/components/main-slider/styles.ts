@@ -20,7 +20,7 @@ export const MainSliderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 65vh;
+  height: 64vh;
   padding: 0 2rem;
   position: relative;
   overflow: hidden;
@@ -28,6 +28,7 @@ export const MainSliderContainer = styled.div`
   @media (max-width: 768px) {
     padding: 0 1rem;
     height: 68vh;
+    height: 57vh;
   }
 `;
 
@@ -39,7 +40,7 @@ export const SliderContent = styled.div`
   position: relative;
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 `;
@@ -54,7 +55,6 @@ export const SliderImageWrapper = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    margin-bottom: 1rem;
   }
 `;
 
@@ -70,7 +70,6 @@ export const SliderImage = styled.img`
 
   @media (min-width: 769px) {
     width: 80%;
-    margin-top: 20px;
   }
 `;
 
@@ -110,6 +109,8 @@ export const SliderText = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     padding: 0 1rem;
+    font-size: 1.2rem;
+    margin-top: 50px;
   }
 `;
 

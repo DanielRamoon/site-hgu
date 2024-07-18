@@ -24,17 +24,42 @@ export default function Footer() {
       <GrayContainer>
         <Image src={Image01} alt="Image 1" />
         <SocialIconsContainer>
-          <SocialIcon>
-            <FaFacebook />
-          </SocialIcon>
-          <SocialIcon>
-            <FaInstagram />
-          </SocialIcon>
-          <SocialIcon>
-            <FaWhatsapp />
-          </SocialIcon>
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SocialIcon>
+              <FaFacebook />
+            </SocialIcon>
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SocialIcon>
+              <FaInstagram />
+            </SocialIcon>
+          </a>
+          <a
+            href="https://www.whatsapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SocialIcon>
+              <FaWhatsapp />
+            </SocialIcon>
+          </a>
         </SocialIconsContainer>
-        <Image src={Image02} alt="Image 2" />
+        <a
+          href="https://www.seusite.com/faleconosco"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ marginLeft: "5rem" }}
+        >
+          <Image src={Image02} alt="Image 2" style={{ width: "70%" }} />
+        </a>
       </GrayContainer>
       <BackgroundSection>
         <ColumnsContainer>

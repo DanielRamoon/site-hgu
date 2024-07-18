@@ -49,6 +49,7 @@ export const NavLink = styled.a`
   font-size: 1.3rem;
 
   &:hover {
+    color: #bf2b2b; /* Muda a cor para #BF2B2B ao passar o mouse */
     text-decoration: none;
   }
 `;
@@ -126,5 +127,11 @@ export const SubMenu = styled.div`
 
   ${NavLink} {
     margin: 10px 15px;
+    color: #777;
+    text-decoration: none;
+
+    &:hover {
+      color: #bf2b2b; /* Muda a cor para #BF2B2B ao passar o mouse */
+    }
   }
 `;

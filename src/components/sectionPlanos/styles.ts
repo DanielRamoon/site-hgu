@@ -10,7 +10,7 @@ export const PlansContainer = styled.div`
 
   @media (max-width: 768px) {
     height: 123vh;
-    margin-top: 50px;
+    position: relative;
   }
 `;
 
@@ -96,7 +96,7 @@ export const SideImageContainer = styled.div`
 
   @media (max-width: 768px) {
     position: relative;
-    top: 0.5rem;
+    top: 3.8rem;
     left: 2rem;
     z-index: -1;
     text-align: center;
@@ -116,6 +116,5 @@ export const SideImageElement = styled.img`
 
   @media (max-width: 768px) {
     margin: 5rem 0;
-    margin-top: 180px;
   }
 `;

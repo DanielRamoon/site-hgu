@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom"; // Certifique-se de que esta importação está correta
 import bgImage from "../../assets/bg-rodape.png";
 
 export const FooterWrapper = styled.div`
@@ -159,4 +160,28 @@ export const HospitalAddress = styled.div`
   @media (max-width: 768px) {
     font-size: 0.8em;
   }
+`;
+
+export const ContactButtonWrapper = styled.div`
+  margin-left: 5rem;
+
+  @media (max-width: 768px) {
+    margin-left: 20px;
+    margin-bottom: 0px;
+  }
+
+  img {
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.1);
+  }
+`;
+
+export const ContactButton = styled(Link)`
+  display: block;
+  text-decoration: none;
+  color: inherit;
 `;

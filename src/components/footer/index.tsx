@@ -11,7 +11,8 @@ import {
   ColumnTitle,
   LinkList,
   LinkItem,
-  HospitalAddress,
+  ContactButtonWrapper,
+  ContactButton, // Certifique-se de que esta importação está correta
 } from "./style";
 import Image01 from "./../../assets/logo002.fw.png";
 import Image02 from "./../../assets/bt-faleconosco.fw.png";
@@ -51,14 +52,11 @@ export default function Footer() {
               <FaPhone />
             </SocialIcon>
           </a>
-          <a
-            href="https://www.seusite.com/faleconosco"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ marginLeft: "5rem" }}
-          >
-            <Image src={Image02} alt="Image 2" style={{ width: "70%" }} />
-          </a>
+          <ContactButtonWrapper>
+            <ContactButton to="/ouvidoria">
+              <Image src={Image02} alt="Image 2" />
+            </ContactButton>
+          </ContactButtonWrapper>
         </SocialIconsContainer>
       </GrayContainer>
       <BackgroundSection>
@@ -119,39 +117,26 @@ export default function Footer() {
                 <a href="#">Exames</a>
               </LinkItem>
               <LinkItem>
-                <a href="#">Telemedicina</a>
-              </LinkItem>
-              <LinkItem>
                 <a href="#">Internações</a>
               </LinkItem>
               <LinkItem>
-                <a href="#">Laboratório</a>
+                <a href="#">Urgências e emergências</a>
               </LinkItem>
               <LinkItem>
-                <a href="#">Urgência e Emergência</a>
+                <a href="#">Cirurgias</a>
+              </LinkItem>
+              <LinkItem>
+                <a href="#">Vacinas</a>
+              </LinkItem>
+              <LinkItem>
+                <a href="#">Odontologia</a>
               </LinkItem>
             </LinkList>
           </Column>
           <Column>
-            <ColumnTitle>FALE CONOSCO</ColumnTitle>
-            <LinkList>
-              <LinkItem>
-                <a href="#">Contato</a>
-              </LinkItem>
-              <LinkItem>
-                <a href="#">Ouvidoria</a>
-              </LinkItem>
-              <LinkItem>
-                <a href="#">Trabalhe Conosco</a>
-              </LinkItem>
-            </LinkList>
+            <ColumnTitle>CONTATO</ColumnTitle>
           </Column>
         </ColumnsContainer>
-        <HospitalAddress>
-          Hospital HGU
-          <br />
-          Av. Fernando Goes, 1076, centro, Petrolina-PE.
-        </HospitalAddress>
       </BackgroundSection>
     </FooterWrapper>
   );

@@ -4,6 +4,7 @@ import About from "./pages/about";
 import Branches from "./pages/branches";
 import OurPlans from "./pages/ourPlans/indes";
 import DescriptionSlide from "./pages/descriptionSlide";
+import Ombudsman from "./pages/ombudsman";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/description-slide" element={<DescriptionSlide />} />
         <Route path="/branches" element={<Branches />} />
         <Route path="/our-plans" element={<OurPlans />} />
+        <Route path="/ouvidoria" element={<Ombudsman />} />
       </Routes>
     </Router>
   );

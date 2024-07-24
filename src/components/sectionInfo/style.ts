@@ -33,6 +33,11 @@ export const CentralImage = styled.img`
   width: 30%;
   margin-bottom: 30px;
   margin-top: 40px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   @media (max-width: 768px) {
     width: 80%;
@@ -54,6 +59,11 @@ export const BottomImageWrapper = styled.div`
 export const BottomImage = styled.img`
   width: 30%;
   margin: 0 10px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   @media (max-width: 768px) {
     width: 70%;
@@ -64,6 +74,11 @@ export const BottomImage = styled.img`
 export const Image = styled.img`
   width: 20%;
   margin: 0 10px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   @media (max-width: 768px) {
     width: 70%;

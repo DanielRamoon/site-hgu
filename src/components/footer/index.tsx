@@ -159,8 +159,7 @@ export default function Footer() {
         <HospitalAddress>
           Hospital HGU
           <br />
-          Av. Cel. Antônio Hónorato Viana, 129 - Gercino Coelho, Petrolina - PE
-          56308-000
+          Av. Fernando Goes, 1076, centro, Petrolina-PE.
         </HospitalAddress>
       </BackgroundSection>
     </FooterWrapper>

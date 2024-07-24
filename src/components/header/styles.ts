@@ -131,7 +131,7 @@ export const SubMenu = styled.div`
     text-decoration: none;
 
     &:hover {
-      color: #bf2b2b;
+      color: #bf2b2a;
     }
   }
 `;

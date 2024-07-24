@@ -36,10 +36,16 @@ export const Image = styled.img`
   width: 20%;
   margin: 0 10px;
   margin-left: 3rem;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Adiciona transição suave */
 
   @media (max-width: 768px) {
     width: 50%;
     margin: 10px 0;
+  }
+
+  &:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho da imagem */
+    opacity: 0.8; /* Torna a imagem um pouco transparente */
   }
 `;
 

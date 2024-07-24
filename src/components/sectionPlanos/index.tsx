@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   PlansContainer,
   Title,
@@ -8,8 +9,6 @@ import {
   SideImageContainer,
   SideImageElement,
 } from "./styles";
-import { Link } from "react-router-dom";
-
 import Image1 from "../../assets/bt-plano01.png";
 import Image2 from "../../assets/bt-plano02.png";
 import Image3 from "../../assets/bt-plano03.png";
@@ -21,8 +20,24 @@ const Plans = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fade, setFade] = useState(true);
+  const navigate = useNavigate();
 
   const sideImages = [SideImage1, SideImage2];
+  const titles = [
+    "Individual e/ou família referência",
+    "Individual e/ou família executivo",
+    "Coletivo empresarial 40%",
+    "Coletivo empresarial Total",
+  ];
+
+  const handleCardClick = (index: number) => {
+    navigate("/our-plans", {
+      state: {
+        title: titles[index],
+        imageSrc: sideImages[index % sideImages.length], // ajusta o índice se for maior que o número de imagens
+      },
+    });
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -66,23 +81,21 @@ const Plans = () => {
         </strong>
       </Description>
       <CardsContainer>
-        <Card as={Link} to="/our-plans">
+        <Card onClick={() => handleCardClick(0)}>
           <img src={Image1} alt="Plano 1" />
         </Card>
         <Card
           style={{ position: "relative", right: isMobile ? "0px" : "184px" }}
-          as={Link}
-          to="/our-plans"
+          onClick={() => handleCardClick(2)}
         >
           <img src={Image3} alt="Plano 2" />
         </Card>
-        <Card as={Link} to="/our-plans">
+        <Card onClick={() => handleCardClick(1)}>
           <img src={Image2} alt="Plano 3" />
         </Card>
         <Card
           style={{ position: "relative", right: isMobile ? "0px" : "184px" }}
-          as={Link}
-          to="/our-plans"
+          onClick={() => handleCardClick(3)}
         >
           <img src={Image4} alt="Plano 4" />
         </Card>

@@ -34,6 +34,7 @@ export const CentralImage = styled.img`
   margin-bottom: 30px;
   margin-top: 40px;
   transition: transform 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.1);
@@ -60,6 +61,7 @@ export const BottomImage = styled.img`
   width: 30%;
   margin: 0 10px;
   transition: transform 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.1);
@@ -75,6 +77,7 @@ export const Image = styled.img`
   width: 20%;
   margin: 0 10px;
   transition: transform 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.1);

@@ -7,7 +7,6 @@ import {
   BottomImageWrapper,
   BottomImage,
 } from "./style";
-import Image01 from "./../../assets/info001.png";
 import Image02 from "./../../assets/info02.fw.png";
 import Image03 from "./../../assets/info03.fw.png";
 import CentralImageSrc from "./../../assets/titulo-unidades.fw.png";
@@ -28,12 +27,19 @@ export default function SectionInfo() {
     });
   };
 
+  const handleAnsClick = () => {
+    window.open("https://www.gov.br/ans/pt-br", "_blank");
+  };
+
+  const handleLgpdClick = () => {
+    window.open("https://www.hgusaude.com.br/lgpd.php", "_blank");
+  };
+
   return (
     <SectionWrapper>
       <InnerWrapper>
-        <Image src={Image01} alt="Image 1" />
-        <Image src={Image02} alt="Image 2" />
-        <Image src={Image03} alt="Image 3" />
+        <Image src={Image02} alt="Image 2" onClick={handleAnsClick} />
+        <Image src={Image03} alt="Image 3" onClick={handleLgpdClick} />
       </InnerWrapper>
       <CentralImage src={CentralImageSrc} alt="Central Image" />
       <BottomImageWrapper>

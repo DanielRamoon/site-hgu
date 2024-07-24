@@ -15,7 +15,7 @@ import {
 } from "./style";
 import Image01 from "./../../assets/logo002.fw.png";
 import Image02 from "./../../assets/bt-faleconosco.fw.png";
-import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaPhone } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -43,23 +43,23 @@ export default function Footer() {
             </SocialIcon>
           </a>
           <a
-            href="https://www.whatsapp.com"
+            href="tel:+5511999999999" // Substitua pelo número de telefone real
             target="_blank"
             rel="noopener noreferrer"
           >
             <SocialIcon>
-              <FaWhatsapp />
+              <FaPhone />
             </SocialIcon>
           </a>
+          <a
+            href="https://www.seusite.com/faleconosco"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ marginLeft: "5rem" }}
+          >
+            <Image src={Image02} alt="Image 2" style={{ width: "70%" }} />
+          </a>
         </SocialIconsContainer>
-        <a
-          href="https://www.seusite.com/faleconosco"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ marginLeft: "5rem" }}
-        >
-          <Image src={Image02} alt="Image 2" style={{ width: "70%" }} />
-        </a>
       </GrayContainer>
       <BackgroundSection>
         <ColumnsContainer>
@@ -96,25 +96,16 @@ export default function Footer() {
             <ColumnTitle>PLANOS</ColumnTitle>
             <LinkList>
               <LinkItem>
-                <a href="#">Plano Básico</a>
+                <a href="#">Individual e/ou família referência </a>
               </LinkItem>
               <LinkItem>
-                <a href="#">Plano Plus</a>
+                <a href="#">Individual e/ou família executivo </a>
               </LinkItem>
               <LinkItem>
-                <a href="#">Plano Premium</a>
+                <a href="#">Coletivo empresarial 40%</a>
               </LinkItem>
               <LinkItem>
-                <a href="#">Plano Familiar</a>
-              </LinkItem>
-              <LinkItem>
-                <a href="#">Plano Empresarial</a>
-              </LinkItem>
-              <LinkItem>
-                <a href="#">Adesão</a>
-              </LinkItem>
-              <LinkItem>
-                <a href="#">FAQ</a>
+                <a href="#">Coletivo empresarial Total</a>
               </LinkItem>
             </LinkList>
           </Column>

@@ -92,16 +92,16 @@ const Header: React.FC = () => {
           {isSubMenuVisible2 && (
             <SubMenu>
               <NavLink as={Link} to="/Planos">
-                Individual
+                Individual e/ou família referência
               </NavLink>
               <NavLink as={Link} to="/Planos/team">
-                Familiar
+                Individual e/ou família executivo
               </NavLink>
               <NavLink as={Link} to="/Planos/contact">
-                Coletivo Empresarial
+                Coletivo empresarial 40%
               </NavLink>
               <NavLink as={Link} to="/Planos/contact">
-                Corporativo 30%
+                Coletivo empresarial Total
               </NavLink>
             </SubMenu>
           )}

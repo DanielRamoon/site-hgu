@@ -35,9 +35,23 @@ const Header: React.FC = () => {
     setIsSubMenuVisible2(false);
   };
 
+  const handleBeneficiariosClick = () => {
+    window.open(
+      "http://sistemas.hgusaude.com.br:88/solusweb/usuario/",
+      "_blank"
+    );
+  };
+
+  const handlePrestadoresClick = () => {
+    window.open(
+      "http://sistemas.hgusaude.com.br:88/solusweb/prestador/",
+      "_blank"
+    );
+  };
+
   return (
     <HeaderContainer>
-      <Logo>
+      <Logo as={Link} to="/">
         <img src={logo} alt="Logo" />
       </Logo>
       <NavLinks>
@@ -95,9 +109,15 @@ const Header: React.FC = () => {
         <NavLink href="#servicos">Serviços</NavLink>
       </NavLinks>
       <ButtonGroup>
-        <Button color="#BF2B2B">Beneficiários</Button>
-        <Button color="#378EBB">Prestadores</Button>
-        <Button color="#BF2B2B">Rede Credenciada</Button>
+        <Button color="#BF2B2B" onClick={handleBeneficiariosClick}>
+          Beneficiários
+        </Button>
+        <Button color="#378EBB" onClick={handlePrestadoresClick}>
+          Prestadores
+        </Button>
+        <Button color="#BF2B2B" onClick={handleBeneficiariosClick}>
+          Rede Credenciada
+        </Button>
       </ButtonGroup>
       <SearchContainer>
         <SearchInput type="text" placeholder="Pesquise" />

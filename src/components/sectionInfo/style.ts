@@ -70,3 +70,19 @@ export const Image = styled.img`
     margin: 10px 0;
   }
 `;
+
+export const Button = styled.button`
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: darkred;
+  }
+`;

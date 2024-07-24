@@ -8,6 +8,8 @@ import {
   SideImageContainer,
   SideImageElement,
 } from "./styles";
+import { Link } from "react-router-dom";
+
 import Image1 from "../../assets/bt-plano01.png";
 import Image2 from "../../assets/bt-plano02.png";
 import Image3 from "../../assets/bt-plano03.png";
@@ -64,19 +66,23 @@ const Plans = () => {
         </strong>
       </Description>
       <CardsContainer>
-        <Card>
+        <Card as={Link} to="/our-plans">
           <img src={Image1} alt="Plano 1" />
         </Card>
         <Card
           style={{ position: "relative", right: isMobile ? "0px" : "184px" }}
+          as={Link}
+          to="/our-plans"
         >
           <img src={Image3} alt="Plano 2" />
         </Card>
-        <Card>
+        <Card as={Link} to="/our-plans">
           <img src={Image2} alt="Plano 3" />
         </Card>
         <Card
           style={{ position: "relative", right: isMobile ? "0px" : "184px" }}
+          as={Link}
+          to="/our-plans"
         >
           <img src={Image4} alt="Plano 4" />
         </Card>

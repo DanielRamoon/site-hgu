@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import {
   SectionWrapper,
   InnerWrapper,
@@ -5,6 +7,7 @@ import {
   CentralImage,
   BottomImageWrapper,
   BottomImage,
+  Button,
 } from "./style";
 import Image01 from "./../../assets/info001.png";
 import Image02 from "./../../assets/info02.fw.png";
@@ -28,6 +31,9 @@ export default function SectionInfo() {
         <BottomImage src={BottomImage02} alt="Bottom Image 2" />
         <BottomImage src={BottomImage03} alt="Bottom Image 3" />
       </BottomImageWrapper>
+      <Button as={Link} to="/branches">
+        Saiba Mais
+      </Button>
     </SectionWrapper>
   );
 }

@@ -34,7 +34,7 @@ const Plans = () => {
     navigate("/our-plans", {
       state: {
         title: titles[index],
-        imageSrc: sideImages[index % sideImages.length], // ajusta o índice se for maior que o número de imagens
+        imageSrc: sideImages[index % sideImages.length],
       },
     });
   };

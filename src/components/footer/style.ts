@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom"; // Certifique-se de que esta importação está correta
+import { Link } from "react-router-dom";
 import bgImage from "../../assets/bg-rodape.png";
 
 export const FooterWrapper = styled.div`
@@ -37,16 +37,16 @@ export const Image = styled.img`
   width: 20%;
   margin: 0 10px;
   margin-left: 3rem;
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Adiciona transição suave */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
 
   @media (max-width: 768px) {
     width: 50%;
     margin: 10px 0;
-  }
-
-  &:hover {
-    transform: scale(1.05); /* Aumenta ligeiramente o tamanho da imagem */
-    opacity: 0.8; /* Torna a imagem um pouco transparente */
   }
 `;
 
@@ -62,18 +62,18 @@ export const SocialIcon = styled.div`
   gap: 10px;
   margin-left: 5rem;
 
-  @media (max-width: 768px) {
-    width: 50px;
-    height: 50px;
-    margin: 10px 0;
-  }
-
   svg {
     color: #bf2b2b;
     width: 50px;
     height: 50px;
+  }
 
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0;
+
+    svg {
       width: 35px;
       height: 35px;
     }
@@ -119,6 +119,8 @@ export const Column = styled.div`
 
   @media (max-width: 768px) {
     margin: 20px 0;
+    width: 100%; /* Adicione esta linha */
+    text-align: center; /* Adicione esta linha */
   }
 `;
 
@@ -148,35 +150,25 @@ export const LinkItem = styled.li`
   }
 `;
 
-export const HospitalAddress = styled.div`
-  color: white;
-  text-align: left;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  line-height: 1.3;
-  font-size: 0.9em;
-  margin-left: 27px;
-
-  @media (max-width: 768px) {
-    font-size: 0.8em;
-  }
-`;
-
 export const ContactButtonWrapper = styled.div`
   margin-left: 5rem;
 
-  @media (max-width: 768px) {
-    margin-left: 20px;
-    margin-bottom: 0px;
-  }
-
   img {
-    width: 100%;
+    width: 90%;
     transition: transform 0.3s ease;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   &:hover img {
     transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 10px;
+    margin-bottom: 0px;
   }
 `;
 

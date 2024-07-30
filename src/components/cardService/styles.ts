@@ -1,15 +1,20 @@
 import styled from "styled-components";
 
 export const CardsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.5rem;
   padding: 5rem;
+  margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+  }
 `;
 
 export const Card = styled.div`
-  flex: 1 1 calc(25% - 1rem);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
@@ -24,9 +29,5 @@ export const Card = styled.div`
     width: 100%;
     height: auto;
     display: block;
-  }
-
-  @media (max-width: 768px) {
-    flex: 1 1 100%;
   }
 `;

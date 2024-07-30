@@ -32,7 +32,7 @@ export const Logo = styled.div`
 
 export const NavLinks = styled.nav`
   display: flex;
-  gap: 1.8rem;
+  gap: 1.5rem;
   margin-right: 1rem;
   margin-top: 20px;
 
@@ -46,10 +46,10 @@ export const NavLinks = styled.nav`
 export const NavLink = styled.a`
   color: #777;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 
   &:hover {
-    color: #bf2b2b; /* Muda a cor para #BF2B2B ao passar o mouse */
+    color: #bf2b2b;
     text-decoration: none;
   }
 `;
@@ -61,7 +61,7 @@ export const SearchContainer = styled.div`
   padding: 0.5rem;
   border-radius: 5px;
   margin-left: -300px;
-  margin-top: -80px;
+  margin-top: -85px;
   margin-bottom: 15px;
 
   @media (max-width: 768px) {
@@ -85,6 +85,18 @@ export const SearchIcon = styled.div`
   margin-left: 0.5rem;
 `;
 
+export const WebMailLink = styled.a`
+  color: #777;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-right: 1rem;
+
+  &:hover {
+    color: #bf2b2b;
+    text-decoration: none;
+  }
+`;
+
 export const ButtonGroup = styled.div`
   display: flex;
   gap: 0.6rem;
@@ -105,6 +117,7 @@ export const Button = styled.button<{ color: string }>`
   padding: 0.9rem 2rem;
   font-size: 1.2rem;
   cursor: pointer;
+
   &:hover {
     opacity: 0.8;
   }
@@ -134,4 +147,11 @@ export const SubMenu = styled.div`
       color: #bf2b2a;
     }
   }
+`;
+
+export const Separator = styled.div`
+  height: 20px;
+  width: 1px;
+  background-color: #777;
+  margin: 0 1rem;
 `;

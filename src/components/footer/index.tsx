@@ -12,7 +12,6 @@ import {
   LinkList,
   LinkItem,
   ContactButtonWrapper,
-  ContactButton, // Certifique-se de que esta importação está correta
 } from "./style";
 import Image01 from "./../../assets/logo002.fw.png";
 import Image02 from "./../../assets/bt-faleconosco.fw.png";
@@ -44,7 +43,7 @@ export default function Footer() {
             </SocialIcon>
           </a>
           <a
-            href="tel:+5511999999999" // Substitua pelo número de telefone real
+            href="tel:+5511999999999"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -53,9 +52,13 @@ export default function Footer() {
             </SocialIcon>
           </a>
           <ContactButtonWrapper>
-            <ContactButton to="/ouvidoria">
+            <a
+              href="http://www.hgusaude.com.br/ouvidoria.php"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image src={Image02} alt="Image 2" />
-            </ContactButton>
+            </a>
           </ContactButtonWrapper>
         </SocialIconsContainer>
       </GrayContainer>
@@ -132,9 +135,6 @@ export default function Footer() {
                 <a href="#">Odontologia</a>
               </LinkItem>
             </LinkList>
-          </Column>
-          <Column>
-            <ColumnTitle>CONTATO</ColumnTitle>
           </Column>
         </ColumnsContainer>
       </BackgroundSection>

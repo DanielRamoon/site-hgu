@@ -11,6 +11,8 @@ import {
   SearchIcon,
   ButtonGroup,
   Button,
+  WebMailLink,
+  Separator, // Import the Separator component
 } from "./styles";
 import logo from "../../assets/logo-hgusaude.png";
 import { FaSearch } from "react-icons/fa";
@@ -120,6 +122,10 @@ const Header: React.FC = () => {
         </Button>
       </ButtonGroup>
       <SearchContainer>
+        <WebMailLink as={Link} to="/webmail">
+          WebMail
+        </WebMailLink>
+        <Separator />
         <SearchInput type="text" placeholder="Pesquise" />
         <SearchIcon>
           <FaSearch />

@@ -90,7 +90,7 @@ export const Card = styled.div`
 
 export const SideImageContainer = styled.div`
   position: absolute;
-  top: 118rem;
+  top: 120rem;
   left: 50rem;
   z-index: -1;
 

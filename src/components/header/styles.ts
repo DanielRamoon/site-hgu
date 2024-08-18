@@ -96,34 +96,39 @@ export const WebMailLink = styled.a`
     text-decoration: none;
   }
 `;
-
 export const ButtonGroup = styled.div`
   display: flex;
   gap: 0.6rem;
   margin-top: 20px;
+  align-items: stretch; // Garante que todos os itens filhos tenham a mesma altura
 
   @media (max-width: 768px) {
-    display: flex;
     gap: 3px;
     margin-top: 1rem;
     padding: 5px;
+    align-items: stretch; // Mantém a altura igual em dispositivos móveis
   }
 `;
 
-export const Button = styled.button<{ color: string }>`
-  background-color: ${({ color }) => color};
-  color: #fff;
+export const Button = styled.button`
+  flex: 1; // Garante que todos os botões tenham a mesma largura
+  padding: 10px 15px;
+  background-color: ${(props) => props.color || "#000"};
+  color: white;
   border: none;
-  padding: 0.9rem 2rem;
-  font-size: 1.2rem;
+  border-radius: 4px;
   cursor: pointer;
-
-  &:hover {
-    opacity: 0.8;
-  }
+  text-align: center;
+  font-size: 1%.2;
+  display: flex;
+  align-items: center;
+  justify-content: center; // Centraliza o texto verticalmente
+  height: 100%; // Garante que o botão ocupe 100% da altura disponível
 
   @media (max-width: 768px) {
-    padding: 0.4rem 0.8rem;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    height: 3rem; // Mantém a altura igual em dispositivos móveis
   }
 `;
 
@@ -209,7 +214,7 @@ export const FormContainer = styled.div`
     width: 100%;
   }
 
-  button {
+  buttonSend {
     padding: 10px;
     background-color: #bf2b2a;
     color: white;

@@ -170,8 +170,8 @@ const Header: React.FC = () => {
             onClick={handleWebMailClick}
             style={{
               cursor: "pointer",
-              color: "blue",
-              textDecoration: "underline",
+              color: "#BF2B2B",
+              textDecoration: "none",
             }}
           >
             WebMail
@@ -186,10 +186,10 @@ const Header: React.FC = () => {
 
       {isModalVisible && (
         <ModalOverlay>
+          <CloseButton onClick={closeModal}>X</CloseButton>
           <ModalContent>
             {modalContent === "fisica" && (
               <FormContainer>
-                <CloseButton onClick={closeModal}>X</CloseButton>
                 <h2>Pessoa Física</h2>
                 <form>
                   <label>Nome:</label>

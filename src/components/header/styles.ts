@@ -141,7 +141,9 @@ export const SubMenu = styled.div`
   ${NavLink} {
     margin: 10px 15px;
     color: #777;
+    background-color: #fff;
     text-decoration: none;
+    border: none;
 
     &:hover {
       color: #bf2b2a;
@@ -154,4 +156,65 @@ export const Separator = styled.div`
   width: 1px;
   background-color: #777;
   margin: 0 1rem;
+`;
+
+export const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+`;
+
+export const ModalContent = styled.div`
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+`;
+
+export const CloseButton = styled.button`
+  background-color: #bf2b2a;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+`;
+
+export const FormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  input,
+  textarea {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  button {
+    padding: 10px;
+    background-color: #bf2b2a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 `;

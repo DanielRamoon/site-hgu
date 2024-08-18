@@ -177,3 +177,13 @@ export const ContactButton = styled(Link)`
   text-decoration: none;
   color: inherit;
 `;
+
+export const AddressContainer = styled.div`
+  text-align: left;
+  padding: 20px;
+  color: #fafafa;
+
+  p {
+    margin: 0;
+  }
+`;

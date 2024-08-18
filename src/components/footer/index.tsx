@@ -11,10 +11,9 @@ import {
   ColumnTitle,
   LinkList,
   LinkItem,
-  ContactButtonWrapper,
+  AddressContainer, // Adicionado para estilizar a nova coluna
 } from "./style";
 import Image01 from "./../../assets/logo002.fw.png";
-import Image02 from "./../../assets/bt-faleconosco.fw.png";
 import { FaFacebook, FaInstagram, FaPhone } from "react-icons/fa";
 
 export default function Footer() {
@@ -51,15 +50,6 @@ export default function Footer() {
               <FaPhone />
             </SocialIcon>
           </a>
-          <ContactButtonWrapper>
-            <a
-              href="http://www.hgusaude.com.br/ouvidoria.php"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image src={Image02} alt="Image 2" />
-            </a>
-          </ContactButtonWrapper>
         </SocialIconsContainer>
       </GrayContainer>
       <BackgroundSection>
@@ -136,6 +126,10 @@ export default function Footer() {
               </LinkItem>
             </LinkList>
           </Column>
+          <AddressContainer>
+            <p>Av. Fernando Goes, 1076, centro, Petrolina-PE.</p>
+            <p>(87) 3866-8250</p>
+          </AddressContainer>
         </ColumnsContainer>
       </BackgroundSection>
     </FooterWrapper>

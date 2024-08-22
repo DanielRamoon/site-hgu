@@ -1,18 +1,4 @@
-import styled, { keyframes } from "styled-components";
-
-const fadeIn = keyframes`
-  0% {
-    opacity: 0.2; 
-    transform: translateY(20px);
-  }
-  50% {
-    opacity: 0.6; 
-  }
-  100% {
-    opacity: 1; 
-    transform: translateY(0);
-  }
-`;
+import styled from "styled-components";
 
 export const MainSliderContainer = styled.div`
   background-size: cover;
@@ -27,7 +13,7 @@ export const MainSliderContainer = styled.div`
 
   @media (max-width: 768px) {
     padding: 0 1rem;
-    height: 68vh;
+    height: 60vh;
   }
 `;
 
@@ -61,11 +47,22 @@ export const SliderImage = styled.img`
   width: 100%;
   height: auto;
   object-fit: cover;
-  position: relative;
-  top: 58px;
-  z-index: -1;
-  opacity: 1;
-  animation: ${fadeIn} 5s ease-out forwards;
+  position: absolute;
+  top: -118px;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+
+  &.active {
+    opacity: 1;
+  }
+
+  &.special-image {
+    /* Estilos específicos para a imagem que você quer modificar */
+    transform: scale(1.2); /* Exemplo de redimensionamento */
+    border: 2px solid red; /* Exemplo de adição de borda */
+  }
 
   @media (min-width: 769px) {
     width: 70%;
@@ -109,7 +106,8 @@ export const SliderText = styled.div`
     width: 100%;
     padding: 0 1rem;
     font-size: 1.2rem;
-    margin-top: 50px;
+    position: relative;
+    top: -150px;
   }
 `;
 

@@ -7,7 +7,6 @@ export const FooterWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 20px;
   box-sizing: border-box;
 `;
 

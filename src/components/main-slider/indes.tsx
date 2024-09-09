@@ -20,7 +20,6 @@ import backgroundImage3 from "../../assets/bg-slide03.png";
 
 const MainSlider: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-  const [previousImageIndex, setPreviousImageIndex] = useState<number>(0); // Armazena a imagem anterior
   const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false);
   const isMobile = window.innerWidth <= 768;
   const navigate = useNavigate();
@@ -34,12 +33,11 @@ const MainSlider: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIsImageLoaded(false); // Marcar imagem como não carregada
-      setPreviousImageIndex(currentImageIndex); // Definir a imagem atual como anterior
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [currentImageIndex, images.length]);
+  }, [images.length]);
 
   useEffect(() => {
     const image = new Image();
@@ -49,7 +47,6 @@ const MainSlider: React.FC = () => {
 
   const handleIndicatorClick = (index: number) => {
     setIsImageLoaded(false); // Marcar imagem como não carregada
-    setPreviousImageIndex(currentImageIndex); // Definir a imagem atual como anterior
     setCurrentImageIndex(index);
   };
 
@@ -84,23 +81,13 @@ const MainSlider: React.FC = () => {
   };
 
   return (
-    <MainSliderContainer>
-      {/* Camada de fundo anterior */}
-      <div
-        className="background-image"
-        style={{
-          backgroundImage: `url(${backgrounds[previousImageIndex]})`,
-          opacity: isImageLoaded ? 0 : 1,
-        }}
-      />
-      {/* Camada de fundo atual */}
-      <div
-        className="background-overlay"
-        style={{
-          backgroundImage: `url(${backgrounds[currentImageIndex]})`,
-          opacity: isImageLoaded ? 1 : 0,
-        }}
-      />
+    <MainSliderContainer
+      style={{
+        backgroundImage: `url(${backgrounds[currentImageIndex]})`,
+        opacity: isImageLoaded ? 1 : 1, // Aplicar opacidade baseada no carregamento
+        transition: "background-image 1s ease-in-out, opacity 0.5s ease-in-out", // Transição suave
+      }}
+    >
       <SliderContent>
         <SliderImageWrapper>
           {images.map((image, index) => (

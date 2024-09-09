@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const MainSliderContainer = styled.div`
+  background-size: cover;
+  background-position: left center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,33 +10,6 @@ export const MainSliderContainer = styled.div`
   padding: 0 2rem;
   position: relative;
   overflow: hidden;
-
-  /* Camada de fundo ativa */
-  .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: left center;
-    transition: opacity 1s ease-in-out; /* Transição suave */
-    z-index: -2;
-  }
-
-  /* Camada de transição */
-  .background-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: left center;
-    opacity: 0; /* Inicialmente invisível */
-    transition: opacity 1s ease-in-out; /* Transição suave */
-    z-index: -1;
-  }
 
   @media (max-width: 768px) {
     padding: 0 1rem;
@@ -83,9 +58,10 @@ export const SliderImage = styled.img`
     opacity: 1;
   }
 
-  &.fade-out {
-    opacity: 0;
-    z-index: 0;
+  &.special-image {
+    /* Estilos específicos para a imagem que você quer modificar */
+    transform: scale(1.2); /* Exemplo de redimensionamento */
+    border: 2px solid red; /* Exemplo de adição de borda */
   }
 
   @media (min-width: 769px) {

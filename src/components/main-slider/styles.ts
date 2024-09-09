@@ -58,10 +58,9 @@ export const SliderImage = styled.img`
     opacity: 1;
   }
 
-  &.special-image {
-    /* Estilos específicos para a imagem que você quer modificar */
-    transform: scale(1.2); /* Exemplo de redimensionamento */
-    border: 2px solid red; /* Exemplo de adição de borda */
+  &.fade-out {
+    opacity: 0;
+    z-index: 0;
   }
 
   @media (min-width: 769px) {

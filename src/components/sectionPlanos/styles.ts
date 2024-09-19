@@ -97,7 +97,7 @@ export const SideImageContainer = styled.div`
 
   @media (max-width: 768px) {
     position: relative;
-    top: 4rem;
+    top: 3rem;
     left: 2rem;
     z-index: -1;
     text-align: center;

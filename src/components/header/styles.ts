@@ -96,11 +96,11 @@ export const WebMailLink = styled.a`
     text-decoration: none;
   }
 `;
+
 export const ButtonGroup = styled.div`
   display: flex;
   gap: 0.6rem;
   margin-top: 20px;
-  align-items: stretch; // Garante que todos os itens filhos tenham a mesma altura
 
   @media (max-width: 768px) {
     gap: 3px;
@@ -119,16 +119,15 @@ export const Button = styled.button`
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
-  font-size: 1%.2;
+  font-size: 1rem; // Corrige o valor incorreto no seu código original
   display: flex;
   align-items: center;
   justify-content: center; // Centraliza o texto verticalmente
-  height: 100%; // Garante que o botão ocupe 100% da altura disponível
+  height: 3rem; // Define uma altura uniforme para todos os botões
 
   @media (max-width: 768px) {
     padding: 8px 12px;
     font-size: 0.9rem;
-    height: 3rem; // Mantém a altura igual em dispositivos móveis
   }
 `;
 
@@ -149,6 +148,7 @@ export const SubMenu = styled.div`
     background-color: #fff;
     text-decoration: none;
     border: none;
+    font-size: 14px;
 
     &:hover {
       color: #bf2b2a;

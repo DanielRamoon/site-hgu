@@ -21,35 +21,16 @@ import logo from "../../assets/logo-hgusaude.png";
 import { FaSearch } from "react-icons/fa";
 
 const Header: React.FC = () => {
-  const [isSubMenuVisible, setIsSubMenuVisible] = useState(false);
-  const [isSubMenuVisible2, setIsSubMenuVisible2] = useState(false);
-  const [isSubMenuBeneficiariosVisible, setIsSubMenuBeneficiariosVisible] =
-    useState(false);
+  const [visibleSubMenu, setVisibleSubMenu] = useState<string | null>(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [modalContent, setModalContent] = useState<"fisica" | "juridica">();
 
-  const handleBeneficiariosMouseEnter = () => {
-    setIsSubMenuBeneficiariosVisible(true);
+  const handleSubMenuMouseEnter = (menuName: string) => {
+    setVisibleSubMenu(menuName);
   };
 
-  const handleBeneficiariosMouseLeave = () => {
-    setIsSubMenuBeneficiariosVisible(false);
-  };
-
-  const handleMouseEnter = () => {
-    setIsSubMenuVisible(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsSubMenuVisible(false);
-  };
-
-  const handleMouseEnter2 = () => {
-    setIsSubMenuVisible2(true);
-  };
-
-  const handleMouseLeave2 = () => {
-    setIsSubMenuVisible2(false);
+  const handleSubMenuMouseLeave = () => {
+    setVisibleSubMenu(null);
   };
 
   const handleBeneficiariosClick = () => {
@@ -87,25 +68,25 @@ const Header: React.FC = () => {
         </Logo>
         <NavLinks>
           <div
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            onMouseEnter={() => handleSubMenuMouseEnter("operadora")}
+            onMouseLeave={handleSubMenuMouseLeave}
             style={{ position: "relative" }}
           >
             <NavLink as={Link} to="">
               Nossa Operadora
             </NavLink>
-            {isSubMenuVisible && (
+            {visibleSubMenu === "operadora" && (
               <SubMenu>
                 <NavLink as={Link} to="/about">
                   História
                 </NavLink>
-                <NavLink as={Link} to="/about/team">
+                <NavLink as={Link} to="/branches">
                   Nossas Unidades
                 </NavLink>
-                <NavLink as={Link} to="/about/contact">
+                <NavLink as={Link} to="/page/protecao-dados">
                   Proteção de Dados
                 </NavLink>
-                <NavLink as={Link} to="/about/contact">
+                <NavLink as={Link} to="/page/ouvidoria">
                   Ouvidoria
                 </NavLink>
               </SubMenu>
@@ -113,40 +94,42 @@ const Header: React.FC = () => {
           </div>
 
           <div
-            onMouseEnter={handleMouseEnter2}
-            onMouseLeave={handleMouseLeave2}
+            onMouseEnter={() => handleSubMenuMouseEnter("planos")}
+            onMouseLeave={handleSubMenuMouseLeave}
             style={{ position: "relative" }}
           >
             <NavLink as={Link} to="Planos">
               Planos
             </NavLink>
-            {isSubMenuVisible2 && (
+            {visibleSubMenu === "planos" && (
               <SubMenu>
-                <NavLink as={Link} to="/Planos">
+                <NavLink as={Link} to="/our-plans">
                   Individual e/ou família referência
                 </NavLink>
-                <NavLink as={Link} to="/Planos/team">
+                <NavLink as={Link} to="/our-plans">
                   Individual e/ou família executivo
                 </NavLink>
-                <NavLink as={Link} to="/Planos/contact">
+                <NavLink as={Link} to="our-plans">
                   Coletivo empresarial 40%
                 </NavLink>
-                <NavLink as={Link} to="/Planos/contact">
+                <NavLink as={Link} to="our-plans">
                   Coletivo empresarial Total
                 </NavLink>
               </SubMenu>
             )}
           </div>
+
           <NavLink href="#servicos">Serviços</NavLink>
         </NavLinks>
+
         <ButtonGroup>
           <div
-            onMouseEnter={handleBeneficiariosMouseEnter}
-            onMouseLeave={handleBeneficiariosMouseLeave}
+            onMouseEnter={() => handleSubMenuMouseEnter("beneficiarios")}
+            onMouseLeave={handleSubMenuMouseLeave}
             style={{ position: "relative" }}
           >
             <Button color="#BF2B2B">Beneficiários</Button>
-            {isSubMenuBeneficiariosVisible && (
+            {visibleSubMenu === "beneficiarios" && (
               <SubMenu style={{ position: "absolute", top: "100%", left: 0 }}>
                 <NavLink as="button" onClick={() => openModal("fisica")}>
                   Pessoa Física

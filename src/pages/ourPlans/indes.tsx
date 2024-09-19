@@ -37,7 +37,7 @@ export default function OurPlans() {
       <Header />
       <BranchesWrapper>
         <Title>{title || "Nossos Planos"}</Title>
-        <LargeImage src={imageSrc || ""} alt={title || "Imagem"} />
+        {/* <LargeImage src={imageSrc || ""} alt={title || "Imagem"} /> */}
         <TextContent>{defaultTextContent}</TextContent>
       </BranchesWrapper>
       <Footer />

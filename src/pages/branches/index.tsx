@@ -37,7 +37,7 @@ export default function Branches() {
       <Header />
       <BranchesWrapper>
         <Title>{title || "Nossas Filiais"}</Title>
-        <LargeImage src={imageSrc || ""} alt={title || "Imagem"} />
+        {/* <LargeImage src={imageSrc || ""} alt={title || "Imagem"} /> */}
         <TextContent>{defaultTextContent}</TextContent>
       </BranchesWrapper>
       <Footer />

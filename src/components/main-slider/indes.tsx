@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   MainSliderContainer,
@@ -15,8 +15,6 @@ import FtSlider1 from "../../assets/ft-alide01.fw.png";
 import FtSlider2 from "../../assets/foto-slide02.fw.png";
 import FtSlider3 from "../../assets/foto-slide03.fw.png";
 import backgroundImage1 from "../../assets/bg-slide01.png";
-import backgroundImage2 from "../../assets/bg-slide02.png";
-import backgroundImage3 from "../../assets/bg-slide03.png";
 
 const MainSlider: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
@@ -25,10 +23,15 @@ const MainSlider: React.FC = () => {
   const navigate = useNavigate();
 
   const images = [FtSlider1, FtSlider2, FtSlider3];
-  const backgrounds = useMemo(
-    () => [backgroundImage1, backgroundImage2, backgroundImage3],
-    []
-  );
+
+  // Mantém apenas uma imagem de fundo fixa
+  const backgroundImage = backgroundImage1;
+
+  const descriptions = [
+    "O Plano é sempre cuidar de você e sua família",
+    "Venha conhecer nosso plano Empresarial",
+    "Telemedicina: Mais segurança e praticidade para você.",
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -41,24 +44,13 @@ const MainSlider: React.FC = () => {
 
   useEffect(() => {
     const image = new Image();
-    image.src = backgrounds[currentImageIndex];
+    image.src = backgroundImage;
     image.onload = () => setIsImageLoaded(true);
-  }, [currentImageIndex, backgrounds]);
+  }, [backgroundImage]);
 
   const handleIndicatorClick = (index: number) => {
     setIsImageLoaded(false); // Marcar imagem como não carregada
     setCurrentImageIndex(index);
-  };
-
-  const getDescription = () => {
-    switch (currentImageIndex) {
-      case 1:
-        return "Venha conhecer nosso plano Empresarial";
-      case 2:
-        return "Telemedicina: Mais segurança e praticidade para você.";
-      default:
-        return "O Plano é sempre cuidar de você e sua família";
-    }
   };
 
   const handleButtonClick = () => {
@@ -83,7 +75,7 @@ const MainSlider: React.FC = () => {
   return (
     <MainSliderContainer
       style={{
-        backgroundImage: `url(${backgrounds[currentImageIndex]})`,
+        backgroundImage: `url(${backgroundImage})`, // Apenas uma imagem de fundo
         opacity: isImageLoaded ? 1 : 1, // Aplicar opacidade baseada no carregamento
         transition: "background-image 1s ease-in-out, opacity 0.5s ease-in-out", // Transição suave
       }}
@@ -108,7 +100,7 @@ const MainSlider: React.FC = () => {
         </SliderImageWrapper>
         <SliderText>
           <SliderDescription>
-            <span>{getDescription()}</span>
+            <span>{descriptions[currentImageIndex]}</span>
           </SliderDescription>
           <ActionButton onClick={handleButtonClick}>Clique aqui</ActionButton>
         </SliderText>

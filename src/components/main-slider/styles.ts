@@ -6,14 +6,22 @@ export const MainSliderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 64vh;
   padding: 0 2rem;
   position: relative;
   overflow: hidden;
+  height: 64vh;
 
   @media (max-width: 768px) {
     padding: 0 1rem;
-    height: 60vh;
+    height: 80vh;
+  }
+
+  @media (min-width: 769px) and (max-width: 1200px) {
+    height: 84vh; /* Ajuste para telas médias (como notebooks) */
+  }
+
+  @media (min-width: 1920px) {
+    height: 42vh; /* Ajuste para telas de 1920x1080 */
   }
 `;
 
@@ -52,7 +60,7 @@ export const SliderImage = styled.img`
   left: 0;
   z-index: 1;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 2s ease-in-out;
 
   &.active {
     opacity: 1;
@@ -65,6 +73,10 @@ export const SliderImage = styled.img`
   }
 
   @media (min-width: 769px) {
+    width: 70%;
+  }
+
+  @media (min-width: 1201px) {
     width: 70%;
   }
 `;

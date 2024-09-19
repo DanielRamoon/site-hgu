@@ -13,11 +13,11 @@ export const MainSliderContainer = styled.div`
 
   @media (max-width: 768px) {
     padding: 0 1rem;
-    height: 80vh;
+    height: 60vh;
   }
 
   @media (min-width: 769px) and (max-width: 1200px) {
-    height: 64vh; /* Ajuste para telas médias (como notebooks) */
+    height: 84vh; /* Ajuste para telas médias (como notebooks) */
   }
 
   @media (min-width: 1920px) {

@@ -33,7 +33,7 @@ export const GrayContainer = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 20%;
+  width: 12%;
   margin: 0 10px;
   margin-left: 3rem;
   transition: transform 0.3s ease, opacity 0.3s ease;

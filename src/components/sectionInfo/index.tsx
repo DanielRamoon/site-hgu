@@ -12,6 +12,7 @@ import Image03 from "./../../assets/info03.fw.png";
 import CentralImageSrc from "./../../assets/titulo-unidades.fw.png";
 import BottomImage02 from "./../../assets/unidade02.png";
 import BottomImage03 from "./../../assets/unidade03.png";
+import BottomImage01 from "./../../assets/unidade001.png";
 
 interface HandleImageClickParams {
   title: string;
@@ -44,8 +45,18 @@ export default function SectionInfo() {
       <CentralImage src={CentralImageSrc} alt="Central Image" />
       <BottomImageWrapper>
         <BottomImage
-          src={BottomImage02}
+          src={BottomImage01}
           alt="Bottom Image 2"
+          onClick={() =>
+            handleImageClick({
+              title: "Espaço Girasol",
+              imageSrc: BottomImage01,
+            })
+          }
+        />
+        <BottomImage
+          src={BottomImage02}
+          alt="Bottom Image 1"
           onClick={() =>
             handleImageClick({
               title: "CENPRE - Centro de Prevenção e Reabilitação do HGU",

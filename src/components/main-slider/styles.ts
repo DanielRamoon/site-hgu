@@ -17,7 +17,7 @@ export const MainSliderContainer = styled.div`
   }
 
   @media (min-width: 769px) and (max-width: 1200px) {
-    height: 84vh; /* Ajuste para telas médias (como notebooks) */
+    height: 64vh; /* Ajuste para telas médias (como notebooks) */
   }
 
   @media (min-width: 1920px) {

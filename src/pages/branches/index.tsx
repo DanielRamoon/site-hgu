@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
-import { BranchesWrapper, Title, LargeImage, TextContent } from "./styles";
+import { BranchesWrapper, Title, TextContent } from "./styles";
 
 interface LocationState {
   title: string;
@@ -30,7 +30,7 @@ const defaultTextContent = `
 
 export default function Branches() {
   const location = useLocation();
-  const { title, imageSrc } = (location.state || {}) as LocationState;
+  const { title } = (location.state || {}) as LocationState;
 
   return (
     <div>

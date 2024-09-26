@@ -45,3 +45,49 @@ export const TitleHistoric = styled.p`
     padding: 0 1rem;
   }
 `;
+
+export const SliderWrapper = styled.div`
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  overflow: hidden;
+  margin: 0 auto;
+`;
+
+export const Slide = styled.div<{ active: boolean }>`
+  display: ${({ active }) => (active ? "block" : "none")};
+  width: 100%;
+  transition: opacity 0.5s ease-in-out;
+`;
+
+export const SlideImage = styled.img`
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+`;
+
+export const ArrowButton = styled.button`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #378ebb;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  font-size: 1.5em;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  &:first-of-type {
+    left: 10px;
+  }
+
+  &:last-of-type {
+    right: 10px;
+  }
+`;

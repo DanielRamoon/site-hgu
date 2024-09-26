@@ -67,9 +67,8 @@ export const SliderImage = styled.img`
   }
 
   &.special-image {
-    /* Estilos específicos para a imagem que você quer modificar */
-    transform: scale(1.2); /* Exemplo de redimensionamento */
-    border: 2px solid red; /* Exemplo de adição de borda */
+    transform: scale(1.2);
+    border: 2px solid red;
   }
 
   @media (min-width: 769px) {
